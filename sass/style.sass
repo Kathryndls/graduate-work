@@ -1,0 +1,422 @@
+
+@mixin button-green  
+  display: block
+  font-size: 22px
+  // margin-top: -20px
+  padding: 10px 15px
+  border: none
+  border-radius: 5px
+  color: white
+  background-color: rgb(123, 218, 28)
+
+@mixin blue-stripe
+  display: inline-block
+  // font-size: 29px
+  background-color: #18a7d0
+  padding: 6px
+  border-radius: 3px
+  position: relative
+  z-index: 2
+
+// @mixin blue-stripe::after
+//   content: ''
+//   display: block
+//   position: absolute
+//   // top: 199px
+//   // left: 749px
+//   border: 27px solid transparent 
+//   border-left: 30px solid #18a7d0 
+//   z-index: 5 
+
+%lineh
+  align-content: center
+  width: 60px
+  height: 5px
+  display: block
+  margin-left: auto
+  margin-right: auto
+
+$color: #18a7d0 
+$width: 5em 
+/* менюшка */
+.main_header 
+  background: url(../img/main/bg.png) center center no-repeat
+  color: white
+
+// секция 1
+.header 
+  background-color: rgba( 0, 0, 0, 0.7)
+  &_body 
+    // padding-top: 10px
+  &_link 
+    color: chartreuse
+    text-decoration: none
+  &_slider
+    padding-top: 50px
+  &_text 
+    /* главный первый слайд */
+    // padding-top: 80px
+  &_subtext 
+    display: inline-block
+    font-size: 29px
+    background-color: #18a7d0
+    padding: 6px
+    border-radius: 3px
+    position: relative
+    z-index: 2
+  &::after
+    content: ''
+    display: block
+    position: absolute
+    top: 199px
+    left: 749px
+    // right: 300px
+    border: 27px solid transparent 
+    border-left: 30px solid #18a7d0 
+    z-index: 5 
+  &_subtext_box 
+    position: relative
+    width: 37px
+    height: 37px
+    transform: rotate(45deg)
+    background-color: pink
+    left: 428px
+    top: -46px
+    position: relative
+    z-index: 1
+  &_button 
+    @include button-green
+    margin-top: 20px
+  &_phone_img 
+    /* фото */
+    position: relative
+    left: 30px
+    top: -90px
+    
+/* секция 2 */
+.about 
+  display: block
+  span 
+    color: red
+    font-size: 21px
+  &_price 
+    font-weight: bold
+  &_button 
+    @include button-green
+    margin: 30px  0px
+  &_header
+    margin: 60px 0px 30px 0px 
+  &_complectation
+    margin-top: 40px
+    font-size: 15px 
+  &_box
+    margin-top: 60px
+
+// секция 3
+.possibilities
+  margin-top: 100px
+  position: relative
+  &1
+    &_iphone
+      position: relative
+      z-index: 3
+    &_about
+      margin-top: 50px
+      position: relative
+      &::before
+        content: ''
+        color: black
+        position: absolute
+        background: url(../img/possibilities/smart_object.png) center center no-repeat
+        width: 50px
+        height: 50px
+        left: -65px
+    &_decor 
+      position: absolute
+      right: 400px
+      top: 200px
+      &_iphone
+        position: absolute
+        left: 365px
+        top: 170px
+        z-index: 2
+  &2
+    position: relative
+    &_about
+      margin-top: 30px
+      &::before
+        content: ''
+        color: black
+        position: absolute
+        background: url(../img/possibilities/smart_object2.png) center center no-repeat
+        width: 50px
+        height: 50px
+        left: 49px
+    &_phone
+      position: absolute
+      top: -50px
+
+// секция 4 заказ 
+.order 
+  background: url(../img/order/bgc.png) center center no-repeat
+  color: white
+  margin-top: 100px
+  margin-bottom: 50px
+  height: 350px 
+
+  &_header 
+    margin-top: 40px
+    &_subtext 
+      @include blue-stripe
+      font-size: 17px
+      padding: 5px 75px 5px 26px
+      &::after
+        content: ''
+        display: block
+        position: absolute
+        top: 2px
+        left: 492px
+        border: 29px solid transparent 
+        border-left: 30px solid #18a7d0 
+        z-index: 5 
+    &_bonus
+      margin-top: 40px
+      &1::before
+        content: ''
+        color: black
+        position: absolute
+        background: url(../img/order/Watch.png) center center no-repeat
+        width: 50px
+        height: 50px
+        left: 313px
+      &2::before
+        content: ''
+        color: black
+        position: absolute
+        background: url(../img/order/Bag.png) center center no-repeat
+        width: 50px
+        height: 50px
+        left: 563px
+  &_form
+    margin: 16px 0px 20px 0px 
+    width: 350px
+    height: 320px
+    align-items: center
+    border: 3px solid $color
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-wrap: wrap
+    background: #000
+    span
+      display: block
+      font-size: 20px
+      text-align: center
+      padding: 15px
+    input 
+      align-items: center
+      text-align: start
+      background: transparent
+      color: white
+      padding: 10px 15px
+      border-radius: 4px
+      outline: none 
+      margin: 5px 0px 0px 0px 
+      border: 2px solid white 
+      &::placeholder
+        color: white
+    p 
+      margin-top: 9px
+  &_button
+    @include button-green
+    margin-top: 8px
+
+// секция 5 
+.possibilities_two
+  position: relative
+  &_simulation_about
+    position: absolute
+    left: 1000px
+    max-width: 400px
+    margin-top: 70px
+    &::before
+        content: ''
+        color: black
+        position: absolute
+        background: url(../img/possibilities_two/smrt_simulation.png) center center no-repeat
+        width: 50px
+        height: 50px
+        left: -70px    
+  &_play_about
+    position: absolute
+    left: 500px
+    max-width: 400px
+    margin-top: 100px
+    &::before
+      content: ''
+      color: black
+      position: absolute
+      background: url(../img/possibilities_two/smrt_play.png) center center no-repeat
+      width: 50px
+      height: 50px
+      left: -70px
+  &_play
+    margin-top: 45px
+  &_smrt1
+    position: absolute
+    left: 340px
+    top: 160px
+  &_smrt2
+    position: absolute
+    // left: 940px
+    top: 510px
+    right: 490px
+
+// секция 6
+.work 
+  // position: relative
+  // background: url(../img/work/bgc.png)
+  &_header
+    align-content: center
+    margin: 70px 0px 0px 0px
+    padding: 25px 0px 0px 15px
+    text-align: center
+  &_box
+    @extend %lineh
+    background-color: $color
+
+  &_sections
+    margin-top: 190px
+    display: flex
+    align-items: center
+    text-align: center
+    &_allimg
+      width: 170px
+      height: 100px
+      border: 1px solid gray
+      margin: 0 auto
+      display: flex
+      align-items: flex-end
+    img
+      margin-top: 90px
+      width: 100%
+    &_img2
+      // padding-top: 25px
+    p
+      max-width: 290px
+      padding: 20px 
+      text-align: center
+      margin-bottom: 130px
+
+// секция7
+.compatibility
+  &_header
+    margin-bottom: 70px 
+    &_sungl
+      margin-top: -20px
+    &_text 
+      width: 500px
+      text-align: left
+      font-weight: bold
+      font-size: 17px
+      margin-top: 10px
+
+// секция9
+.play
+    // display: flex
+    // justify-content: center
+    // align-items: center
+    // flex-wrap: wrap
+  &_header
+    h2
+      margin-top: 120px
+  &_work_box
+    margin-top: 15px
+    margin-bottom: 25px
+  &_sections
+    h6 
+      margin-top: 30px
+      text-align: center
+      font-weight: bold
+      margin-bottom: 20px 
+    p 
+      text-align: justify
+      width: 400px
+    
+    img 
+      margin-top: 70px
+
+    &_img2
+      padding-top: 25px
+  &_button 
+    align-items: center
+    margin-top: 60px
+    margin-bottom: 60px
+    position: relative
+    left: 50%
+    transform: translate(-50%, 0)
+    padding:  10px 30px
+
+// секция10
+.reviews
+  &_header
+    // margin-top: -100px
+  // &_box
+  //   margin-bottom: 20px
+  &_section 
+    &_ones
+      width: 300px
+    &_separate 
+      border: 2px solid $color
+      width: 300px
+      // padding: 30px
+      // margin: 3px  //оно 
+      position: relative
+      // left: 50%
+      // transform: translate(-50%, 0)
+      // padding:  10px 30px
+      align-items: center
+      img 
+        float: left
+      h6
+        // padding: 10px
+        margin-left: 140px
+        width: 600px
+      p 
+        margin-top: 60px
+        font-size: 15px
+        display: block
+        width: 570px
+
+// секция11
+.wework
+  &_headers
+  &_sections
+    img 
+      text-align: center
+    p 
+      width: 200px
+      text-align: center
+
+// секция12
+.footer 
+  &_link
+    color: black 
+    text-decoration: none  
+    border-bottom: 3px dashed black
+    font: bold
+  &_wrraper
+    margin-top: 50px
+  &_header
+    color: white 
+    background-color: #000
+
+        
+
+
+
+
+
+
+
+
