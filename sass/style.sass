@@ -36,26 +36,24 @@
   margin-left: auto
   margin-right: auto
 
+#clo
+
 $color: #18a7d0 
 $width: 5em 
 /* менюшка */
 .main_header 
-  background: url(../img/main/bg.png) center center no-repeat
+  background: url(../img/main/bg.png) top 0 center no-repeat
   color: white
 
 // секция 1
 .header 
   background-color: rgba( 0, 0, 0, 0.7)
   &_body 
-    // padding-top: 10px
   &_link 
     color: chartreuse
     text-decoration: none
   &_slider
     padding-top: 50px
-  &_text 
-    /* главный первый слайд */
-    // padding-top: 80px
   &_subtext 
     display: inline-block
     font-size: 29px
@@ -95,6 +93,8 @@ $width: 5em
     
 /* секция 2 */
 .about 
+  background: url(../img/about/bgc.png)  center no-repeat
+  margin-top: -15px
   display: block
   span 
     color: red
@@ -111,10 +111,14 @@ $width: 5em
     font-size: 15px 
   &_box
     margin-top: 60px
+  &_liner 
+    margin-bottom: -12px
 
 // секция 3
 .possibilities
-  margin-top: 100px
+  background-color: #fcfcf6
+  padding-top: 100px
+  padding-bottom: 70px 
   position: relative
   &1
     &_iphone
@@ -160,8 +164,6 @@ $width: 5em
 .order 
   background: url(../img/order/bgc.png) center center no-repeat
   color: white
-  margin-top: 100px
-  margin-bottom: 50px
   height: 350px 
 
   &_header 
@@ -233,6 +235,7 @@ $width: 5em
 
 // секция 5 
 .possibilities_two
+  background: url(../img/possibilities_two/bgc.png) top -90px center no-repeat
   position: relative
   &_simulation_about
     position: absolute
@@ -268,29 +271,27 @@ $width: 5em
     top: 160px
   &_smrt2
     position: absolute
-    // left: 940px
-    top: 510px
+    top: 495px
     right: 490px
+  &_liner 
+    margin-top: 40px
 
 // секция 6
 .work 
-  // position: relative
-  // background: url(../img/work/bgc.png)
+  background-color: #fcfcf6
   &_header
     align-content: center
-    margin: 70px 0px 0px 0px
-    padding: 25px 0px 0px 15px
     text-align: center
   &_box
     @extend %lineh
     background-color: $color
 
   &_sections
-    margin-top: 190px
     display: flex
     align-items: center
     text-align: center
     &_allimg
+      margin-top: 190px
       width: 170px
       height: 100px
       border: 1px solid gray
@@ -310,6 +311,7 @@ $width: 5em
 
 // секция7
 .compatibility
+  background-color: #fcfcf6
   &_header
     margin-bottom: 70px 
     &_sungl
@@ -320,16 +322,19 @@ $width: 5em
       font-weight: bold
       font-size: 17px
       margin-top: 10px
+      margin-bottom: 100px
 
+// секция 8
+.video
+  background-color: #fcfcf6
+  h2 
+    padding-bottom: 20px
 // секция9
 .play
-    // display: flex
-    // justify-content: center
-    // align-items: center
-    // flex-wrap: wrap
+  background-color: #fcfcf6
   &_header
     h2
-      margin-top: 120px
+      margin-top: 80px
   &_work_box
     margin-top: 15px
     margin-bottom: 25px
@@ -341,13 +346,14 @@ $width: 5em
       margin-bottom: 20px 
     p 
       text-align: justify
-      width: 400px
-    
+      width: 400px 
     img 
-      margin-top: 70px
-
+      margin-top: 50px
+      margin-left: -40px
     &_img2
-      padding-top: 25px
+      padding-top: 30px
+    &_h6
+      margin-top: -17px 
   &_button 
     align-items: center
     margin-top: 60px
@@ -356,60 +362,90 @@ $width: 5em
     left: 50%
     transform: translate(-50%, 0)
     padding:  10px 30px
-
+  &_liner 
+    margin-top: 30px 
+    margin-bottom: 70px
 // секция10
 .reviews
+  background-color: #fcfcf6
+  padding-bottom: 90px
+  position: relative
+
   &_header
-    // margin-top: -100px
-  // &_box
-  //   margin-bottom: 20px
   &_section 
+    &_smart 
+      position: absolute
+      right: 190px
+      top: 50px
+      width: 150px
+      height: 130px
+      z-index: 1
     &_ones
       width: 300px
     &_separate 
       border: 2px solid $color
-      width: 300px
-      // padding: 30px
-      // margin: 3px  //оно 
+      border-radius: 3px
+      width: 654px
+      padding: 30px
+      margin: 3px  //оно 
       position: relative
-      // left: 50%
-      // transform: translate(-50%, 0)
-      // padding:  10px 30px
       align-items: center
+      padding-bottom: 50px
       img 
         float: left
       h6
-        // padding: 10px
-        margin-left: 140px
+        margin-top: 30px
+        margin-left: 150px
         width: 600px
       p 
-        margin-top: 60px
+        margin-top: 50px
         font-size: 15px
         display: block
         width: 570px
+  &_liner 
+    margin-top: 80px    
+  
 
 // секция11
 .wework
-  &_headers
+  position: relative
+  background-color: #fcfcf6
+  padding-top: 10px
+  padding-bottom: 60px
   &_sections
+    &_test
     img 
-      text-align: center
+      margin-top: 20px
+      margin-left: 59px
+      left: 30px 
     p 
-      width: 200px
+      margin-top: 20px
+      width: 230px
       text-align: center
+      font: bold
+  &_coub 
+    position: absolute
+    left: -50px
+    top: 395px
+    width: 100px
+    height: 80px
 
 // секция12
 .footer 
+  background-color: #fcfcf6
+  margin-top: 40px
   &_link
     color: black 
     text-decoration: none  
-    border-bottom: 3px dashed black
+    border-bottom: 1px dashed black
     font: bold
   &_wrraper
-    margin-top: 50px
+    margin-top: 30px
   &_header
     color: white 
     background-color: #000
+    &s 
+      padding-top: 10px
 
         
 
